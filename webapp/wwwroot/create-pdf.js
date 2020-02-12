@@ -6,7 +6,7 @@ module.exports = function (callback, html) {
             template: {
                 content: html,
                 engine: 'jsrender',
-                recipe: 'phantom-pdf',
+                recipe: 'chrome-pdf',
                 base: './wwwroot/'
             },
             data: {

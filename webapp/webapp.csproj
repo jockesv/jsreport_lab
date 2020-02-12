@@ -18,15 +18,17 @@
       <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
       <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
       <!-- <Exec WorkingDirectory="$(WwwRoot)" Command="npm install" /> -->
+      <Exec WorkingDirectory="$(WwwRoot)" Command="npm install puppeteer --save" />
       <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-core --save" />
       <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-jsrender --save" />
-      <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-phantom-pdf --save" />
-    </Target>
+      <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-chrome-pdf --save" />
+    </Target> 
 
     <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
       <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
       <!-- <Exec WorkingDirectory="$(WwwRoot)" Command="npm install" />
       <Exec WorkingDirectory="$(WwwRoot)" Command="npm run build" /> -->
+      <Exec WorkingDirectory="$(WwwRoot)" Command="npm install puppeteer --save" />
       <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-core --save" />
       <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-jsrender --save" />
       <Exec WorkingDirectory="$(WwwRoot)" Command="npm install jsreport-phantom-pdf --save" />
