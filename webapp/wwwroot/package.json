@@ -576,7 +576,7 @@
       "version": "1.0.4"
     },
     "jsreport-base": "^2.0.2",
-    "jsreport-chrome-pdf": "^1.6.1",
+    "jsreport-chrome-pdf": "^1.10.0",
     "jsreport-core": "^2.6.2",
     "jsreport-jsrender": "^2.1.1",
     "keypress": {
